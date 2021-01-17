@@ -4,12 +4,16 @@
 //
 //  Created by abc on 2021/01/17.
 //
+<<<<<<< HEAD
 // closure = {} 코드블럭
+=======
+>>>>>>> 930f47d0cd506e542b793bfacf7db9d7c282dcd7
 
 import UIKit
 
 class ViewController: UIViewController {
 
+<<<<<<< HEAD
     var currentValue = 0
     @IBOutlet weak var priceLabel: UILabel!
     
@@ -35,5 +39,13 @@ class ViewController: UIViewController {
         priceLabel.text = "₩\(currentValue)"
     }
     
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+>>>>>>> 930f47d0cd506e542b793bfacf7db9d7c282dcd7
 }
 
