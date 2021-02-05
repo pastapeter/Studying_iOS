@@ -46,7 +46,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="lTL-kl-agg" id="wuB-Gu-O5f"/>
                         <outlet property="lblImageFileName" destination="kSD-Xn-2mu" id="fny-y2-KgX"/>
                         <outlet property="pickerImaage" destination="5tN-Ba-ebM" id="KLp-Ev-Gg4"/>
                     </connections>
