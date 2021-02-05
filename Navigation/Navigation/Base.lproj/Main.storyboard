@@ -58,12 +58,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zA5-5B-tNW">
+                                <rect key="frame" x="153" y="137" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="확대"/>
+                                <connections>
+                                    <action selector="btnZoomOrNot:" destination="BEO-jp-R4C" eventType="touchUpInside" id="ujz-Zd-Qr1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xj8-qv-I5k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="수정화면" id="VRW-YC-JTh"/>
                     <connections>
+                        <outlet property="btnZoom" destination="zA5-5B-tNW" id="771-O4-yIu"/>
                         <outlet property="lblWay" destination="c3u-zr-MAb" id="wQX-WO-7rv"/>
                         <outlet property="swisOn" destination="lWu-Fs-IMb" id="W6k-hy-1pY"/>
                         <outlet property="txMessage" destination="S2a-X6-blE" id="E5S-mX-LZx"/>
