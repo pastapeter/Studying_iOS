@@ -17,22 +17,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="PIa-sq-bi4">
-                                <rect key="frame" x="4.6666666666666572" y="84" width="381" height="325"/>
+                                <rect key="frame" x="-47.666666666666657" y="84" width="485.33333333333326" height="325"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-4H-Vka">
-                                        <rect key="frame" x="126" y="0.0" width="129" height="28.666666666666668"/>
+                                        <rect key="frame" x="178.33333333333331" y="0.0" width="129" height="28.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wMg-kg-603">
-                                        <rect key="frame" x="50.333333333333343" y="81.666666666666657" width="280" height="4"/>
+                                        <rect key="frame" x="102.66666666666666" y="81.666666666666657" width="280" height="4"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="280" id="orF-MN-gz1"/>
                                         </constraints>
                                     </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="111" translatesAutoresizingMaskIntoConstraints="NO" id="6dx-O0-eIe">
-                                        <rect key="frame" x="35" y="138.66666666666666" width="311" height="20.333333333333343"/>
+                                        <rect key="frame" x="87.333333333333314" y="138.66666666666666" width="311" height="20.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjd-dH-3VO">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="20.333333333333332"/>
@@ -55,7 +55,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="96" translatesAutoresizingMaskIntoConstraints="NO" id="AT5-Mn-5ua">
-                                        <rect key="frame" x="42.333333333333343" y="212" width="296" height="30"/>
+                                        <rect key="frame" x="94.666666666666657" y="212" width="296" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-hd-MMf">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -81,16 +81,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="uOa-cc-P8r">
-                                        <rect key="frame" x="0.0" y="295" width="381" height="30"/>
+                                        <rect key="frame" x="0.0" y="295" width="485.33333333333331" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lk-2c-H7z">
-                                                <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="57.333333333333336" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ygP-yD-uPC">
-                                                <rect key="frame" x="81" y="0.0" width="302" height="31"/>
+                                                <rect key="frame" x="81.333333333333314" y="0.0" width="406" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="Xsi-z9-8oI"/>
                                                 </constraints>
@@ -142,6 +142,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JjF-gX-4ry">
+                                <rect key="frame" x="75" y="591" width="240" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -157,6 +161,7 @@
                         <outlet property="btnPlay" destination="Mkj-hd-MMf" id="3pc-4h-2m7"/>
                         <outlet property="btnRecord" destination="Nqb-v6-RS5" id="JTL-Wv-zBc"/>
                         <outlet property="btnStop" destination="Gw2-CZ-Bex" id="kGl-pz-Avb"/>
+                        <outlet property="imageView" destination="JjF-gX-4ry" id="pz9-ri-NaC"/>
                         <outlet property="lblCurrentTime" destination="cjd-dH-3VO" id="xSq-6t-WNg"/>
                         <outlet property="lblEndTime" destination="p2e-Yh-jUX" id="0AV-Q7-0L4"/>
                         <outlet property="lblRecordTime" destination="Cy0-cc-0Up" id="zgs-uM-jpJ"/>
