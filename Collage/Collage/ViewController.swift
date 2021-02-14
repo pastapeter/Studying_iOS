@@ -70,6 +70,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! NSString
         if mediaType.isEqual(to: kUTTypeImage as NSString as String){
+            
             captureImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
             if var ImageList = ImageList{
                 ImageList.append(captureImage)
