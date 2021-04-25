@@ -50,7 +50,7 @@ class CalculatorViewController: UIViewController {
         let getText2 = splitNumberLabel.text ?? "0.0"
         if zeroPctButton.isSelected{
             print(Float(getText)! / Float(getText2)!)
-            result = Float(getText)! / Float(getText2)!
+            result = Float(getText) ?? 0.0 / Float(getText2)!
         } else if tenPctButton.isSelected {
             print( Float(getText)! / Float(getText2)! * 1.1)
            result = Float(getText)! / Float(getText2)! * 1.1
