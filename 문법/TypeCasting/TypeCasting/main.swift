@@ -1,4 +1,11 @@
-import Cocoa
+//
+//  main.swift
+//  TypeCasting
+//
+//  Created by abc on 2021/05/03.
+//
+
+import Foundation
 
 //typeCasting
 /*
@@ -37,7 +44,7 @@ let num: NSNumber = 12
 let word: NSString  = "abc"
 
 let neighbours = [dohyun, jack, nemo]
-//let neighbours: [Any] = [dohyun, jack, nemo]
+//let neighbours: [Any] = [dohyun, jack, nemo, number]
 
 //let neighbours2: [AnyObject] = [dohyun, jack, nemo, number]
 let neighbours2: [AnyObject] = [dohyun, jack, nemo]
@@ -68,6 +75,9 @@ if neighbours[2] is Human {
  */
 // as는 업캐스팅과 패턴매칭에서만 사용할 수 있다.
 
+// downcasting as! as?
+// upcasting as
+
 func findNemo(from animals: [Animal]){
     for animal in animals {
         if animal is Fish {
@@ -80,7 +90,7 @@ func findNemo(from animals: [Animal]){
     }
 }
 
-//findNemo(from: neighbours)
+findNemo(from: neighbours)
 
 if let fish = neighbours[1] as? Fish {
     fish.breathUnderWater()
@@ -88,3 +98,43 @@ if let fish = neighbours[1] as? Fish {
     print("casting has failed")
 }
 
+//타입캐스팅이 쓰이는 곳
+//UserDefault에서 쓰임
+
+let defaults = UserDefaults.standard
+let array = [1,2,3,4,5]
+let arrayKey = "myArray"
+
+defaults.set(array, forKey: arrayKey)
+//let myArray = defaults.array(forKey: arrayKey)
+let myArray = defaults.array(forKey: arrayKey) as! [Int]
+if let MyArray = defaults.array(forKey: arrayKey) as? [Int] {
+    print(MyArray)
+}
+
+//세그웨이로 정보넘길때도 타입캐스팅이 쓰임
+
+//func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    print(indexPath.row)
+//    performSegue(withIdentifier: "ImageSegue", sender: indexPath.row)
+//}
+
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    if segue.identifier == "ImageSegue" {
+//        let destinationVC = segue.destination as! ImageViewController
+//            if let index = sender as? Int {
+//                destinationVC.imageURL = imagesURL[index]
+//            }
+//    }
+//}
+// prepare을 통해 정보를 넘겨주는 일이 있을때, segue.destination은 UIViewController 이고
+// destinationVC를 imageViewController로 만들어주고 싶다면, imageViewController도 UIViewController의 하위 클래스이기 때문에 다운케스트를 할 수 있다.
+// 이를통해서 destinationVC는 ImageViewController로 변환되고
+// 위에서 performSegue에서 전달된 sender를 역시 Int로 downcasting 해서 쓰는것을 확인할 수 있다.
+
+//func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    let message = messages[indexPath.row]
+//
+//    let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+//    cell.label.text = message.body
+//}
