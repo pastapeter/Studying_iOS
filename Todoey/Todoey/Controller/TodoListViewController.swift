@@ -11,6 +11,8 @@ import CoreData
 
 class TodoListViewController: UITableViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var itemArray = [Item]()
@@ -20,11 +22,11 @@ class TodoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        searchBar.delegate = self
         loadItems()
         // Do any additional setup after loading the view.
     }
-
-    //MARK - Tableview Datasource Methoeds
+    //MARK: - Tableview Datasource Methoeds
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
@@ -41,7 +43,8 @@ class TodoListViewController: UITableViewController {
         return cell
     }
     
-    //MARK - Tableview Delegate Methods
+    //MARK: - Tableview Delegate Methods
+
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -56,7 +59,9 @@ class TodoListViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true);
     }
     
-    //MARK - Add New Items
+    
+    //MARK: - Add New Items
+
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add new Todoey Item", message: "", preferredStyle: .alert)
@@ -86,15 +91,41 @@ class TodoListViewController: UITableViewController {
          self.tableView.reloadData()
     }
     
-    func loadItems(){
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
+    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest()){ //default 값 주기
+       // let request: NSFetchRequest<Item> = Item.fetchRequest()
         do {
         itemArray = try context.fetch(request)
         } catch {
             print("ERROR fetching data from context \(error)")
         }
-       
+        self.tableView.reloadData()
     }
 
+}
+
+//MARK: - UISearchBarDelegate
+
+extension TodoListViewController: UISearchBarDelegate {
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //read
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate  = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        loadItems(with: request)
+
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0{
+            loadItems()
+            DispatchQueue.main.async{
+                searchBar.resignFirstResponder()
+            }
+            
+        }
+    }
 }
 
