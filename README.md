@@ -4,6 +4,6 @@
 
 ## 날짜
 ### 7/17
-https://github.com/pastapeter/StandfordCS193
-Concurrency - DispatchQueue, DispatchGroup, CustomQueue
-Protocol - Comparable, CustomStringConvertible, CaseIterable
+1. https://github.com/pastapeter/StandfordCS193
+2. Concurrency - DispatchQueue, DispatchGroup, CustomQueue
+3. Protocol - Comparable, CustomStringConvertible, CaseIterable
