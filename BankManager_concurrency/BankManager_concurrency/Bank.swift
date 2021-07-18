@@ -6,3 +6,24 @@
 //
 
 import Foundation
+
+class Bank {
+    private var clients = [Client]()
+    private var tellers = [Teller]()
+    private var finishedClientCount: Int = 0
+    private var businessTime: TimeInterval?
+    
+    init() {
+        <#statements#>
+    }
+    
+    func open(teller: [Teller], client: [Client]) {
+        
+    }
+    private func assignBusinessToTeller(){
+        
+    }
+    private func resetFinishedClientCount(){
+        
+    }
+}
