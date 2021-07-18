@@ -16,8 +16,8 @@ struct DashBoard {
         print(String.init(format: message, client.waitingNumber, "\(client.priority)", "\(client.businessType)"))
     }
     
-    static func printCloseMessage(){
-       
+    static func printCloseMessage(_ count: Int, businessTime: TimeInterval?){
+        print(String.init(format: Message.close, count, businessTime ?? 0 ))
     }
     
 }
