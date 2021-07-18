@@ -16,6 +16,8 @@
 		28ABD2FD26A2D653000ECC25 /* Clients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ABD2FC26A2D653000ECC25 /* Clients.swift */; };
 		28ABD2FF26A2D71D000ECC25 /* BusinessType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ABD2FE26A2D71D000ECC25 /* BusinessType.swift */; };
 		28ABD30126A2F4DD000ECC25 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ABD30026A2F4DD000ECC25 /* Menu.swift */; };
+		28ABD30326A416CC000ECC25 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ABD30226A416CC000ECC25 /* Bank.swift */; };
+		28ABD30726A418E1000ECC25 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ABD30626A418E1000ECC25 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,8 @@
 		28ABD2FC26A2D653000ECC25 /* Clients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clients.swift; sourceTree = "<group>"; };
 		28ABD2FE26A2D71D000ECC25 /* BusinessType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessType.swift; sourceTree = "<group>"; };
 		28ABD30026A2F4DD000ECC25 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		28ABD30226A416CC000ECC25 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		28ABD30626A418E1000ECC25 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,9 @@
 				28ABD2FA26A2D630000ECC25 /* Client.swift */,
 				28ABD2FE26A2D71D000ECC25 /* BusinessType.swift */,
 				28ABD2FC26A2D653000ECC25 /* Clients.swift */,
+				28ABD30626A418E1000ECC25 /* Message.swift */,
 				28ABD30026A2F4DD000ECC25 /* Menu.swift */,
+				28ABD30226A416CC000ECC25 /* Bank.swift */,
 			);
 			path = BankManager_concurrency;
 			sourceTree = "<group>";
@@ -149,7 +155,9 @@
 				28ABD2FF26A2D71D000ECC25 /* BusinessType.swift in Sources */,
 				28ABD2FB26A2D630000ECC25 /* Client.swift in Sources */,
 				28ABD2F726A2C4ED000ECC25 /* DashBoard.swift in Sources */,
+				28ABD30726A418E1000ECC25 /* Message.swift in Sources */,
 				28ABD30126A2F4DD000ECC25 /* Menu.swift in Sources */,
+				28ABD30326A416CC000ECC25 /* Bank.swift in Sources */,
 				28ABD2F926A2CE8E000ECC25 /* HeadOffice.swift in Sources */,
 				28ABD2F526A2C4CD000ECC25 /* Tellers.swift in Sources */,
 			);
