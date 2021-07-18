@@ -8,8 +8,9 @@
 import Foundation
 
 class Teller {
-    var windowInBank: Int
-    var isWorking = false
+    private var windowInBank: Int
+    private var isWorking = false
+    var isNotworking = true
     let workingQueue : DispatchQueue
     
     init(windowInBank: Int) {
@@ -19,6 +20,7 @@ class Teller {
     
     func handleBusiness(client: Client, with group: DispatchGroup){
         isWorking = true
+        isNotworking = false
         workingQueue.async(group: group) {
             switch client.businessType {
                 case .deposit:
@@ -27,6 +29,7 @@ class Teller {
                     self.handleLoan(client: client)
             }
             self.isWorking = false
+            self.isNotworking = true
         }
     }
     
