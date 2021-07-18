@@ -28,6 +28,7 @@ print(caseList)
 print(CompassDirection.east)
 print(CompassDirection.north)
 print(CompassDirection.allCases[1])
+print(CompassDirection.allCases[3])
 
 
 struct A {
