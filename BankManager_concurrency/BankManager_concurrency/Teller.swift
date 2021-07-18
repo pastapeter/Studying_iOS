@@ -20,9 +20,12 @@ class Teller {
     func handleBusiness(client: Client, with group: DispatchGroup){
         isWorking = true
         workingQueue.async(group: group) {
-            print("은행원 \(self.windowInBank)번 is working for \(client.waitingNumber)번 고객")
-            Thread.sleep(forTimeInterval: 3)
-            print("은행원 \(self.windowInBank)번 finished working \(client.waitingNumber)번 고객")
+            switch client.businessType {
+                case .deposit:
+                    self.handleDeposit(client: client)
+                case .loan:
+                    self.handleLoan(client: client)
+            }
             self.isWorking = false
         }
     }
@@ -30,23 +33,35 @@ class Teller {
     private func handleDeposit(client : Client){
         let clientBusinessType = client.businessType
         let delayTime = clientBusinessType.needTimeToProcess
-        print("은행원 \(self.windowInBank)번 is working for \(client.waitingNumber)번 고객 with \(client.businessType)")
+       
+        DashBoard.printStatus(for: client, about: Message.tellerStart)
         Thread.sleep(forTimeInterval: delayTime)
+        DashBoard.printStatus(for: client, about: Message.tellerFinish)
     }
     
     private func handleLoan(client : Client){
-        
+        reviewDocument(client: client)
+        sendDocumentToHeadOffice(client: client)
+        finishLoan(client: client)
     }
     
     private func sendDocumentToHeadOffice(client: Client){
+        let semaphore = DispatchSemaphore(value: 0)
         
+        HeadOffice.shared.LoanQueue.async {
+            HeadOffice.shared.judgeLoan(client: client)
+            semaphore.signal()
+        }
+        semaphore.wait()
     }
     
     private func reviewDocument(client: Client){
-        
+        DashBoard.printStatus(for: client, about: Message.tellerStart)
+        Thread.sleep(forTimeInterval: client.businessType.needTimeToProcess)
     }
     
     private func finishLoan(client: Client){
-        
+        Thread.sleep(forTimeInterval: client.businessType.needTimeToProcess)
+        DashBoard.printStatus(for: client, about: Message.tellerFinish)
     }
 }
