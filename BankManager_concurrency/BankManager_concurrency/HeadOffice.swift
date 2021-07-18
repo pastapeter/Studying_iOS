@@ -15,8 +15,9 @@ class HeadOffice {
     private init(){}
     
     func judgeLoan(client: Client){
-        
+        DashBoard.printStatus(for: client, about: Message.loanStart)
         Thread.sleep(forTimeInterval: needTimeToJudgeLoan)
+        DashBoard.printStatus(for: client, about: Message.loanEnd)
     }
     
 }
