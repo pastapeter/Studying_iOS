@@ -12,7 +12,9 @@ struct Clients{
     
     init(ClientNumbers : Int){
         for Clientnumber in 1...ClientNumbers{
-            list.append(Client(waitingNumber: Clientnumber))
+            let businessRandom = Int.random(in: 0..<2)
+            let priorityRandom = Int.random(in: 0..<3)
+            list.append(Client(waitingNumber: Clientnumber, businessType: BusinessType.allCases[businessRandom], priority: Priority.allCases[priorityRandom]))
         }
     }
 }
