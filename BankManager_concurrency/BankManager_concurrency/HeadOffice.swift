@@ -16,6 +16,7 @@ class HeadOffice {
     
     func judgeLoan(client: Client){
         
+        Thread.sleep(forTimeInterval: needTimeToJudgeLoan)
     }
     
 }
