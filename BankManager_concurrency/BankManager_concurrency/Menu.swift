@@ -9,5 +9,11 @@ import Foundation
 
 
 enum Menu: String {
-    case start = "1", end = "end"
+    case start = "1", end = "2"
+    
+    static let description = """
+        1: 은행 개점
+        2: 종료
+        입력 :
+        """
 }
