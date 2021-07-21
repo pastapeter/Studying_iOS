@@ -12,4 +12,8 @@
 ## Protocol 
  ### [Comparable, CustomStringConvertible, CaseIterable](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/enum_caseIterable_customeStringConvertible_comparable.playground)
  
+## Enum
+[About Enum](https://github.com/pastapeter/StandfordCS193)
 
+## Computed property
+[왜 쓰일까?](https://github.com/pastapeter/StandfordCS193)
