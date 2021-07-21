@@ -5,13 +5,13 @@ enum CompassDirection: Comparable, CaseIterable, CustomStringConvertible {
     var description: String {
         switch self {
         case .east:
-            return "east"
+            return "0"
         case .north:
-            return "north"
+            return "1"
         case .south:
-            return "south"
+            return "2"
         case .west:
-            return "west"
+            return "3"
         }
     }
     case north, south, east, west
