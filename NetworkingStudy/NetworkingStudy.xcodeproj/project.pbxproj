@@ -14,6 +14,8 @@
 		28CB468826A8929E006AA0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28CB468726A8929E006AA0E7 /* Assets.xcassets */; };
 		28CB468B26A8929E006AA0E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28CB468926A8929E006AA0E7 /* LaunchScreen.storyboard */; };
 		28CB469326A895AA006AA0E7 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB469226A895AA006AA0E7 /* DetailTableViewController.swift */; };
+		28CB469526A9B517006AA0E7 /* URLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB469426A9B517006AA0E7 /* URLError.swift */; };
+		28CB469726A9B965006AA0E7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CB469626A9B965006AA0E7 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		28CB468A26A8929E006AA0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28CB468C26A8929E006AA0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28CB469226A895AA006AA0E7 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		28CB469426A9B517006AA0E7 /* URLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLError.swift; sourceTree = "<group>"; };
+		28CB469626A9B965006AA0E7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				28CB467E26A89298006AA0E7 /* AppDelegate.swift */,
 				28CB468026A89298006AA0E7 /* SceneDelegate.swift */,
 				28CB468226A89298006AA0E7 /* DataTaskViewController.swift */,
+				28CB469426A9B517006AA0E7 /* URLError.swift */,
 				28CB469226A895AA006AA0E7 /* DetailTableViewController.swift */,
+				28CB469626A9B965006AA0E7 /* Model.swift */,
 				28CB468426A89298006AA0E7 /* Main.storyboard */,
 				28CB468726A8929E006AA0E7 /* Assets.xcassets */,
 				28CB468926A8929E006AA0E7 /* LaunchScreen.storyboard */,
@@ -143,6 +149,8 @@
 				28CB469326A895AA006AA0E7 /* DetailTableViewController.swift in Sources */,
 				28CB468326A89298006AA0E7 /* DataTaskViewController.swift in Sources */,
 				28CB467F26A89298006AA0E7 /* AppDelegate.swift in Sources */,
+				28CB469726A9B965006AA0E7 /* Model.swift in Sources */,
+				28CB469526A9B517006AA0E7 /* URLError.swift in Sources */,
 				28CB468126A89298006AA0E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
