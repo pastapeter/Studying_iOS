@@ -17,3 +17,6 @@
 
 ## Computed property
 [왜 쓰일까?](https://github.com/pastapeter/StandfordCS193)
+
+## Singleton
+[About Singleton](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/singleton)
