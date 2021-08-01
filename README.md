@@ -22,6 +22,12 @@
 [About Singleton](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/singleton)
 
 ## Closure
- - [Capture](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/closure)
-- [Escaping Closure](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/closure)
-- [Closure captureList](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/closure)
+ [Capture](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/closure)
+ 
+ 
+[Escaping Closure](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/closure)
+
+
+[Closure captureList](https://github.com/pastapeter/Studying_iOS/tree/master/%EB%AC%B8%EB%B2%95/closure)
+
+
