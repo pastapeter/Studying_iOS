@@ -20,5 +20,39 @@ let c = {
     num += 1
     print("Check point #1: \(num)")
 }
-c()
-print("Check point #2: \(num)")
+//c()
+//print("Check point #2: \(num)")
+
+
+class Pokemon {
+  let name: String
+  init(name: String) {
+    self.name = name
+  }
+    deinit { print("\(self.name) escaped!") }
+}
+
+func delay(_ seconds: Int, closure: @escaping ()->()) {
+  let time = DispatchTime.now() + .seconds(seconds)
+  DispatchQueue.main.asyncAfter(deadline: time) {
+    print("🕑")
+    closure()
+  }
+}
+
+
+func demo3() {
+    var pokemon = Pokemon(name: "Pikachu")
+    print("before closure: \(pokemon.name)")
+    delay(5) { [pokemon] in
+        print("inside closure: \(pokemon.name)")
+    }
+    pokemon = Pokemon(name: "Mewtwo")
+    print("after closure: \(pokemon.name)")
+}
+
+//demo3()
+
+
+
+
