@@ -276,3 +276,50 @@ demo3()
 그리고 delay라는 클로저가 포켓몬을 캡처할때 캡처리스트가 없었다면, 실행시점에 캡쳐해서 맨토스를 잡았겠지만, 캡처리스트를 적용시키면서 피카츄라는 이름을 가진 포켓몬 인스턴스 하나를 복사해서 가지고 있는 것이다. 결국 참조가 아니라 값복사로 캡처를 하고 있다.    
 이렇기 때문에 캡쳐는 피카츄가 된 것으로 확인할 수 있다. 
 
+***
+
+## 클로저의 평가(생성시점 vs 호출시점)
+쭉 읽어본다면, captureList를 쓰면 클로저의 캡쳐는 생성시점에 이뤄지고, 반면에 안쓴다면 호출시점에 캡쳐가 일어난다고 파악할 수 있다.
+출처 : 클로저 캡쳐에 대해서<https://velog.io/@kimdo2297/%ED%81%B4%EB%A1%9C%EC%A0%B8-%EC%BA%A1%EC%B3%90%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C-about-closure-capture>
+
+
+아래와 같은 코드를 이해하는데 시간이 좀 걸렸다. 그래서 스터디원들과 함께 고민하던 중에 같이 알아낸 사항이 있다.
+``` swift
+func biggerOne(_ a : Int, _ b : Int) -> Int? {
+    if a == b {
+        return nil
+    } else if a > b {
+        return a
+    } else {
+        return b
+    }
+}
+
+```
+### 1. 일반적인 클로저 캡처를 사용했다면
+```swift
+var someClosure : (Int, Int) -> Int? = biggerOne(_:_:)
+someClosure = { (left : Int, right : Int) in
+    someClosure(left , right)
+}
+print(someClosure(2,3)!)
+```
+### 2. captureList를 사용했을 경우
+```swift 
+var someClosure : (Int, Int) -> Int? = biggerOne(_:_:)
+someClosure = {[someClosure](left: Int, right: Int) in
+    someClosure(left, right)
+}
+print(someClosure(2,3)!)
+```
+1번의 경우는 오류가 난다. 오류가 난 이유를 자세히 살펴볼때 코드의 흐름을 살펴본다.
+>> 1. someClosure에 biggerOne을 대입한다.( someClosure -> biggerOne)
+>> 2. someClosure는 자기 자신을 캡쳐하는데, 캡쳐리스트를 사용하지 않았기때문에 어떤 것을 캡쳐하는지 모른다.
+>> 3. print 문에 도착하면서 클로져가 실행되고, 이제 클로저의 캡쳐가 평가된다. 
+>> someClosure의 주소값 변경 log: 3c80 -> 3d30(print 문 __여기서 캡쳐가 됨__) -> 3d30 -> 3d30 -> 3d30
+
+2번의 경우에만 오류가 나지 않는다.
+>> 1. someClosure에 biggerOne을 대입한다.( someClosure -> biggerOne)
+>> 2. someClousre은 자기 자신을 캡쳐하는데, 캡쳐리스트를 사용해서 생성시점의 someClosure을 캡쳐한다. (biggerone)
+>> 3. print문에 도착하면 클로저가 실행되고, 답은 3이 나온다.
+>> someClosure의 주소값 변경 log : 3c00 -> 3d70(주소값 변경) -> 3c00(__캡쳐한 someClosure은 처음의 주소와 동일하다.__)
