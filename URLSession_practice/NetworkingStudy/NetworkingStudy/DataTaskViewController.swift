@@ -66,8 +66,6 @@ class DataTaskViewController: UIViewController {
             
         }
         task.resume()
-        
-        
     }
     
     override func viewDidLoad() {
@@ -89,7 +87,6 @@ extension DataTaskViewController: UITableViewDataSource {
         let target = list[indexPath.row]
         cell.textLabel?.text = target.title
         
-        
         return cell
     }
     
@@ -97,5 +94,7 @@ extension DataTaskViewController: UITableViewDataSource {
 }
 
 extension DataTaskViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = 
+    }
 }
