@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28331CB826DBBA590062B29D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28331CB726DBBA590062B29D /* Utils.swift */; };
+		28331CBA26DBBB140062B29D /* TutorialContentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28331CB926DBBB140062B29D /* TutorialContentsVC.swift */; };
+		28331CBC26DBD0010062B29D /* TutorialMasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28331CBB26DBD0010062B29D /* TutorialMasterVC.swift */; };
 		2884A3F326DA3F4B004596C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884A3F226DA3F4B004596C3 /* AppDelegate.swift */; };
 		2884A3F526DA3F4B004596C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884A3F426DA3F4B004596C3 /* SceneDelegate.swift */; };
-		2884A3F726DA3F4B004596C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2884A3F626DA3F4B004596C3 /* ViewController.swift */; };
 		2884A3FA26DA3F4B004596C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2884A3F826DA3F4B004596C3 /* Main.storyboard */; };
 		2884A3FC26DA3F4E004596C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2884A3FB26DA3F4E004596C3 /* Assets.xcassets */; };
 		2884A3FF26DA3F4E004596C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2884A3FD26DA3F4E004596C3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28331CB726DBBA590062B29D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		28331CB926DBBB140062B29D /* TutorialContentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentsVC.swift; sourceTree = "<group>"; };
+		28331CBB26DBD0010062B29D /* TutorialMasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMasterVC.swift; sourceTree = "<group>"; };
 		2884A3EF26DA3F4B004596C3 /* tutorialPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorialPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2884A3F226DA3F4B004596C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2884A3F426DA3F4B004596C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2884A3F626DA3F4B004596C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2884A3F926DA3F4B004596C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2884A3FB26DA3F4E004596C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2884A3FE26DA3F4E004596C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 			children = (
 				2884A3F226DA3F4B004596C3 /* AppDelegate.swift */,
 				2884A3F426DA3F4B004596C3 /* SceneDelegate.swift */,
-				2884A3F626DA3F4B004596C3 /* ViewController.swift */,
+				28331CB726DBBA590062B29D /* Utils.swift */,
+				28331CB926DBBB140062B29D /* TutorialContentsVC.swift */,
+				28331CBB26DBD0010062B29D /* TutorialMasterVC.swift */,
 				2884A3F826DA3F4B004596C3 /* Main.storyboard */,
 				2884A3FB26DA3F4E004596C3 /* Assets.xcassets */,
 				2884A3FD26DA3F4E004596C3 /* LaunchScreen.storyboard */,
@@ -137,9 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2884A3F726DA3F4B004596C3 /* ViewController.swift in Sources */,
 				2884A3F326DA3F4B004596C3 /* AppDelegate.swift in Sources */,
 				2884A3F526DA3F4B004596C3 /* SceneDelegate.swift in Sources */,
+				28331CBC26DBD0010062B29D /* TutorialMasterVC.swift in Sources */,
+				28331CBA26DBBB140062B29D /* TutorialContentsVC.swift in Sources */,
+				28331CB826DBBA590062B29D /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
